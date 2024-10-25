@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Coder",
+        "image": "mem-1.jpg",
+        "content": "Смішнявка",
+        "likes": 999
+    },
+    {
+        "id": 2,
+        "title": "IT-Hub",
+        "image": "mem-2.jpg",
+        "content": "",
+        "likes": 33
+    },
+    {
+        "id": 3,
+        "title": "Sumy-mem",
+        "image": "mem-3.jpg",
+        "content": "В Сумах водієм маршрутки став пес...",
+        "likes": 72
+    },
+    {
+        "id": 4,
+        "title": "BorShikTV",
+        "image": "mem-4.jpg",
+        "content": "",
+        "likes": 100
+    }
+]

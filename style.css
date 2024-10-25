@@ -1,0 +1,229 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s; /* Додаємо анімацію переходу */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+/* Контейнер для постів */
+#posts-container {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Стилі для постів */
+.post {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Додаємо анімацію переходу */
+}
+
+.post h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Центрування зображень */
+.post-image {
+    display: block; /* Встановлюємо блоковий стиль */
+    margin: 0 auto; /* Центруємо зображення */
+    width: 90%; /* Ширина зображення */
+    height: auto; /* Автоматична висота */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+button.like-button,
+button.comment-button,
+button.share-button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+button.like-button.liked {
+    color: red; /* Колір кнопки "подобається" при активному статусі */
+}
+
+button.like-button:hover,
+button.comment-button:hover,
+button.share-button:hover {
+    color: red; /* Підсвітка при наведенні */
+}
+
+.like-count {
+    font-size: 1em;
+    margin-left: 5px;
+    color: #555;
+}
+
+/* Шапка сайту */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+}
+
+.site-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%; /* Зробить логотип круглим, якщо потрібно */
+}
+
+.site-header h1 {
+    font-size: 24px;
+    color: #333; /* Початковий колір логотипа */
+    margin: 0;
+}
+
+/* Темна тема */
+.dark-theme {
+    background-color: #000; /* Чорний фон для темної теми */
+    color: #fff; /* Білий текст для темної теми */
+}
+
+.dark-theme .post {
+    background-color: #222; /* Темно-сірий фон для постів у темній темі */
+    border: 1px solid #444; /* Темно-сірий бордер для постів */
+}
+
+.dark-theme .site-header {
+    background-color: #333; /* Темно-сірий фон для шапки сайту */
+}
+
+.dark-theme .site-header h1 {
+    color: #fff; /* Білий колір для тексту логотипа в темній темі */
+}
+
+.dark-theme button.like-button,
+.dark-theme button.comment-button,
+.dark-theme button.share-button {
+    color: #fff; /* Білий колір для кнопок у темній темі */
+}
+
+.dark-theme button.like-button:hover,
+.dark-theme button.comment-button:hover,
+.dark-theme button.share-button:hover {
+    color: red; /* Червона підсвітка при наведенні в темній темі */
+}
+
+.dark-theme .like-count {
+    color: #ccc; /* Світло-сірий колір для лічильників лайків у темній темі */
+}
+
+.dark-theme .theme-toggle {
+    color: #fff; /* Білий колір для кнопки теми */
+    border: 1px solid #fff; /* Білий бордер для кнопки теми у темній темі */
+}
+
+/* Кнопка для зміни теми */
+.theme-toggle {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Закруглення країв кнопки */
+}
+
+/* Значки для кнопок коментарів та репостів */
+.comment-button,
+.share-button {
+    font-size: 1.2em; /* Збільшуємо розмір шрифту для значків */
+}
+
+/* Додаткові стилі для коментарів та репостів */
+.comment-button i,
+.share-button i {
+    margin-right: 5px; /* Відступ між значком та текстом */
+}
+
+/* Адаптивні стилі */
+@media (max-width: 600px) {
+    #posts-container {
+        width: 100%; /* Повна ширина для маленьких екранів */
+    }
+}
+/* Кнопки */
+button.like-button,
+button.comment-button,
+button.share-button {
+    background: none;
+    border: none;
+    color: black; /* Початковий колір для світлої теми */
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+button.like-button.liked {
+    color: red; /* Червоний колір при активному лайку */
+}
+
+/* Темна тема */
+.dark-theme button.like-button,
+.dark-theme button.comment-button,
+.dark-theme button.share-button {
+    color: white; /* Білий колір для кнопок у темній темі */
+}
+
+.dark-theme button.like-button.liked {
+    color: red; /* Червоний колір для активного лайку у темній темі */
+}
+
+.dark-theme button.like-button:hover,
+.dark-theme button.comment-button:hover,
+.dark-theme button.share-button:hover {
+    color: red; /* Червона підсвітка при наведенні в темній темі */
+}
+/* Стилі для кнопки теми */
+.theme-toggle {
+    padding: 10px;
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Без бордеру */
+    cursor: pointer; /* Змінюємо курсор на pointer */
+    transition: transform 0.3s; /* Додаємо анімацію при натисканні */
+    position: relative; /* Позиціюємо кнопку */
+}
+
+.theme-icon {
+    width: 24px; /* Ширина іконки */
+    height: 24px; /* Висота іконки */
+    fill: black; /* Чорний колір для світлої теми */
+    transition: fill 0.3s; /* Анімація переходу кольору */
+}
+
+/* Світла тема */
+body {
+    background-color: #f5f5f5; /* Світлий фон */
+}
+
+/* Темна тема */
+.dark-theme .theme-icon {
+    fill: white; /* Білий колір для темної теми */
+}
+
+/* Анімація кнопки */
+.theme-toggle:hover {
+    transform: scale(1.1); /* Збільшуємо кнопку при наведенні */
+}
